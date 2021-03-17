@@ -1,0 +1,30 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.post{
+  border: 1px solid;
+  width: 40%;
+  margin-top: 30px;
+  color: blue;
+  margin: 10px auto;
+}
+
+.post-date{
+  color: gray;
+}
+
+.top-page{
+  background-color:burlywood ;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.new-send{
+  display: flex;
+  justify-content: center;
+  background-color:coral;
+  font-size: 50px;
+  margin: 10px;
+  padding: 10px;
+}

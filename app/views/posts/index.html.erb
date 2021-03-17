@@ -1,0 +1,22 @@
+<div class = "top-page">
+<div class = "top-white">
+<h1>TOP PAGE</h1>
+</div>
+</div>
+<div class = new-send>
+<%= link_to '新規の投稿', '/posts/new' %>
+</div>
+
+<% @posts.each do |post|%>
+<div class="post">
+    <div class="post-date">
+      投稿の日時：<%= post.created_at %>
+    </div>
+    <div class="post-content">
+      <%= post.content %>
+    </div>
+  </div>
+<%end%>
+<div class = "gibu">
+  <%= link_to '作者紹介', '/posts/show' %>
+  </div>

@@ -1,0 +1,2 @@
+class Ralk < ApplicationRecord
+end
