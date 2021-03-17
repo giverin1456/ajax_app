@@ -1,20 +1,16 @@
 class PostsController < ApplicationController
   def index
-    # 一覧表示ページを表示するリクエストに対応して動く、アクション
-    @posts = Post.all
-    # rubyのインスタンス変数
-  end
-
-  def new
+    @posts = Post.all.order(id: "DESC")
+    # 表示順番を変える
   end
 
   def create
     Post.create(content: params[:content])
+    redirect_to action: :index
+    # メモを保存した後にトップページへリダイレクトする
   end
 
   def show
     @gibus = Post.find(1)
   end
 end
-
-# routes.rbとposts_controller.rbが繋がっているのか？どういうコードで？／

@@ -1,11 +1,8 @@
-<div class = "top-page">
-<div class = "top-white">
-<h1>TOP PAGE</h1>
-</div>
-</div>
-<div class = new-send>
-<%= link_to '新規の投稿', '/posts/new' %>
-</div>
+<h1>AjaxApp</h1>
+<%= form_with url:  "/posts", method: :post,id: "form" do |form| %>
+  <%= form.text_field :content %>
+  <%= form.submit '投稿する' , id: "submit" %>
+<% end %>
 
 <% @posts.each do |post|%>
 <div class="post">
@@ -17,6 +14,3 @@
     </div>
   </div>
 <%end%>
-<div class = "gibu">
-  <%= link_to '作者紹介', '/posts/show' %>
-  </div>
