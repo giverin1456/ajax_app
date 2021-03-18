@@ -13,6 +13,11 @@
   color: gray;
 }
 
+div[data-check="true"] {
+  background: #585555;
+  // div要素のdata-checkが"true"の時（メモが既読になった時）背景色が変わる
+}
+
 .top-page{
   background-color:burlywood ;
   padding: 10px;
