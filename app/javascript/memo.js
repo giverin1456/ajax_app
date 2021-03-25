@@ -8,14 +8,17 @@ function memo() {
     const XHR = new XMLHttpRequest();
     // XMLHttpRequestのオブジェクトを生成
     XHR.open("POST", "/posts", true);
-    // リクエストの内容を引数へ追記
+    // リクエストの内容を引数へ追記。非同期通信はtrue
     XHR.responseType = "json";
     XHR.send(formData);
+    // FormDataとは？？？
+
     XHR.onload = () => {
       if (XHR.status != 200) {
         alert(`Error ${XHR.status}: ${XHR.statusText}`);
         return null;
       }
+      
       const item = XHR.response.post;
       // レスポンスとして返却されたメモのレコードデータを取得
       const list = document.getElementById("list");
